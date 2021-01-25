@@ -22,7 +22,7 @@ jobs:
       - checkout
 
       # specify any bash command here prefixed with `run: `
-      - run: sem-version go 1.15
+      #- run: sem-version go 1.15
       - run: export GO111MODULE=on
       - run: export GOPATH=~/go
       - run: export PATH=/home/semaphore/go/bin:$PATH
