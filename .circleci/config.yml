@@ -19,15 +19,15 @@ jobs:
     ####   /go/src/bitbucket.org/circleci/go-tool
     working_directory: /go/src/github.com/{{ORG_NAME}}/{{REPO_NAME}}
     steps:
-      - checkout
+      #- checkout
 
       # specify any bash command here prefixed with `run: `
       #- run: sem-version go 1.15
       - run: export GO111MODULE=on
       - run: export GOPATH=~/go
       - run: export PATH=/home/semaphore/go/bin:$PATH
-      - run: checkout
-      - run: cd src
+      #- run: checkout
+      #- run: cd src
       - run: go get ./...
       - run: go test ./...
       - run: go build -v .
