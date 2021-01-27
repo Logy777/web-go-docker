@@ -13,7 +13,7 @@ blocks:
             - checkout
             - echo $DOCKERHUB_PASSWORD
             - echo $DOCKERHUB_USERNAME
-            - echo $DOCKERHUB_PASSWORD | docker login --username "$DOCKERHUB_USERNAME" --password-stdin
+            - docker login --username "logy777" --password "Dock1984Er"
             - 'docker pull $DOCKERHUB_USERNAME/mathapp-production:latest'
             - 'docker build -f Dockerfile.production --cache-from $DOCKERHUB_USERNAME/mathapp-production:latest -t $DOCKERHUB_USERNAME/mathapp-production:latest .'
             - 'docker push $DOCKERHUB_USERNAME/mathapp-production:latest'
