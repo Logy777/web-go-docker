@@ -14,7 +14,6 @@ blocks:
             - echo $DOCKERHUB_PASSWORD
             - echo $DOCKERHUB_USERNAME
             - docker login --username "logy777" --password "Dock1984Er"
-            - 'docker pull $DOCKER_USERNAME/mathapp-production:latest'
             - 'docker build -f Dockerfile.production --cache-from $DOCKERHUB_USERNAME/mathapp-production:latest -t $DOCKERHUB_USERNAME/mathapp-production:latest .'
             - 'docker push $DOCKERHUB_USERNAME/mathapp-production:latest'
       secrets:
